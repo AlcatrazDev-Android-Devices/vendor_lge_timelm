@@ -1,0 +1,13 @@
+com.lge.camera
+com.lge.qmemoplus
+com.lge.servicemenu
+com.lge.alphadepth
+com.lge.alphatofvcsel
+com.pmdtec.quantumalpha
+com.globaluiservice.main
+com.lge.alphadepthcalibration
+com.lge.alphabokehdemo
+com.lge.tofcovertest
+android
+com.lge.systemservice
+com.lge.ime
