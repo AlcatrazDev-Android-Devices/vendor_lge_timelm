@@ -6,8 +6,6 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/lge/timelm
 
 PRODUCT_COPY_FILES += \
-    vendor/lge/timelm/proprietary/system_ext/lib/libc++_shared.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libc++_shared.so \
-    vendor/lge/timelm/proprietary/system_ext/lib64/libc++_shared.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libc++_shared.so \
     vendor/lge/timelm/proprietary/vendor/etc/acdbdata/Bluetooth_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/Bluetooth_cal.acdb \
     vendor/lge/timelm/proprietary/vendor/etc/acdbdata/General_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/General_cal.acdb \
     vendor/lge/timelm/proprietary/vendor/etc/acdbdata/Global_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/Global_cal.acdb \
@@ -484,6 +482,7 @@ PRODUCT_COPY_FILES += \
     vendor/lge/timelm/proprietary/vendor/etc/wifi/bdwlan_ch1.elf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/bdwlan_ch1.elf \
     vendor/lge/timelm/proprietary/vendor/etc/wifi/icudt53l.dat:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/icudt53l.dat \
     vendor/lge/timelm/proprietary/vendor/firmware/CAMERA_ICP.elf:$(TARGET_COPY_OUT_VENDOR)/firmware/CAMERA_ICP.elf \
+    vendor/lge/timelm/proprietary/vendor/lib/HDR10plus.so:$(TARGET_COPY_OUT_VENDOR)/lib/HDR10plus.so \
     vendor/lge/timelm/proprietary/vendor/lib/camera/com.qti.eeprom.irs2381c_polar.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera/com.qti.eeprom.irs2381c_polar.so \
     vendor/lge/timelm/proprietary/vendor/lib/camera/com.qti.eeprom.s5k3j1_fm24c32d.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera/com.qti.eeprom.s5k3j1_fm24c32d.so \
     vendor/lge/timelm/proprietary/vendor/lib/camera/com.qti.eeprom.s5k3m5_fm24c32d.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera/com.qti.eeprom.s5k3m5_fm24c32d.so \
@@ -650,10 +649,13 @@ PRODUCT_COPY_FILES += \
     vendor/lge/timelm/proprietary/vendor/lib/camera/sensors.hal.flicker.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera/sensors.hal.flicker.so \
     vendor/lge/timelm/proprietary/vendor/lib/hw/camera.kona.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/camera.kona.so \
     vendor/lge/timelm/proprietary/vendor/lib/hw/com.qti.chi.override.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/com.qti.chi.override.so \
+    vendor/lge/timelm/proprietary/vendor/lib/lib.com.lge.elvis.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib.com.lge.elvis.so \
     vendor/lge/timelm/proprietary/vendor/lib/libCmcPdaf.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCmcPdaf.so \
     vendor/lge/timelm/proprietary/vendor/lib/libCmcPdaf_tele.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCmcPdaf_tele.so \
     vendor/lge/timelm/proprietary/vendor/lib/libDxHdcp.so:$(TARGET_COPY_OUT_VENDOR)/lib/libDxHdcp.so \
+    vendor/lge/timelm/proprietary/vendor/lib/libSJVideoNR.so:$(TARGET_COPY_OUT_VENDOR)/lib/libSJVideoNR.so \
     vendor/lge/timelm/proprietary/vendor/lib/libSNPE.so:$(TARGET_COPY_OUT_VENDOR)/lib/libSNPE.so \
+    vendor/lge/timelm/proprietary/vendor/lib/libSRIyuv.so:$(TARGET_COPY_OUT_VENDOR)/lib/libSRIyuv.so \
     vendor/lge/timelm/proprietary/vendor/lib/libarcsoft_beauty_picselfie.so:$(TARGET_COPY_OUT_VENDOR)/lib/libarcsoft_beauty_picselfie.so \
     vendor/lge/timelm/proprietary/vendor/lib/libarcsoft_dualcam_refocus.so:$(TARGET_COPY_OUT_VENDOR)/lib/libarcsoft_dualcam_refocus.so \
     vendor/lge/timelm/proprietary/vendor/lib/libarcsoft_dualcam_refocus_front.so:$(TARGET_COPY_OUT_VENDOR)/lib/libarcsoft_dualcam_refocus_front.so \
@@ -662,6 +664,8 @@ PRODUCT_COPY_FILES += \
     vendor/lge/timelm/proprietary/vendor/lib/libarcsoft_object_tracking.so:$(TARGET_COPY_OUT_VENDOR)/lib/libarcsoft_object_tracking.so \
     vendor/lge/timelm/proprietary/vendor/lib/libarcsoft_picselfie_algorithm.so:$(TARGET_COPY_OUT_VENDOR)/lib/libarcsoft_picselfie_algorithm.so \
     vendor/lge/timelm/proprietary/vendor/lib/libarcsoft_singlecam_portrait_lighting.so:$(TARGET_COPY_OUT_VENDOR)/lib/libarcsoft_singlecam_portrait_lighting.so \
+    vendor/lge/timelm/proprietary/vendor/lib/libbwfocuspeaking.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbwfocuspeaking.so \
+    vendor/lge/timelm/proprietary/vendor/lib/libc++_shared_snpe.so:$(TARGET_COPY_OUT_VENDOR)/lib/libc++_shared_snpe.so \
     vendor/lge/timelm/proprietary/vendor/lib/libcamera2ndk_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcamera2ndk_vendor.so \
     vendor/lge/timelm/proprietary/vendor/lib/libcamera_nn_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcamera_nn_stub.so \
     vendor/lge/timelm/proprietary/vendor/lib/libcamerapostproc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcamerapostproc.so \
@@ -680,10 +684,18 @@ PRODUCT_COPY_FILES += \
     vendor/lge/timelm/proprietary/vendor/lib/libcapiv2vop.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcapiv2vop.so \
     vendor/lge/timelm/proprietary/vendor/lib/libchilog.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchilog.so \
     vendor/lge/timelm/proprietary/vendor/lib/libcom.qti.chinodeutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcom.qti.chinodeutils.so \
+    vendor/lge/timelm/proprietary/vendor/lib/libeepromcutter.so:$(TARGET_COPY_OUT_VENDOR)/lib/libeepromcutter.so \
+    vendor/lge/timelm/proprietary/vendor/lib/libfilm_emulation_hal.so:$(TARGET_COPY_OUT_VENDOR)/lib/libfilm_emulation_hal.so \
     vendor/lge/timelm/proprietary/vendor/lib/libgui_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgui_vendor.so \
     vendor/lge/timelm/proprietary/vendor/lib/libimagerwrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib/libimagerwrapper.so \
+    vendor/lge/timelm/proprietary/vendor/lib/libipebpsstriping.so:$(TARGET_COPY_OUT_VENDOR)/lib/libipebpsstriping.so \
+    vendor/lge/timelm/proprietary/vendor/lib/liblgae_main.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblgae_main.so \
+    vendor/lge/timelm/proprietary/vendor/lib/liblgawb_main.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblgawb_main.so \
+    vendor/lge/timelm/proprietary/vendor/lib/liblgdnnsnpe.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblgdnnsnpe.so \
+    vendor/lge/timelm/proprietary/vendor/lib/liblghdri.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblghdri.so \
     vendor/lge/timelm/proprietary/vendor/lib/libmmcamera_faceproc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_faceproc.so \
     vendor/lge/timelm/proprietary/vendor/lib/libmmcamera_faceproc2.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_faceproc2.so \
+    vendor/lge/timelm/proprietary/vendor/lib/libmorpho_image_stab31.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmorpho_image_stab31.so \
     vendor/lge/timelm/proprietary/vendor/lib/libmpbase.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmpbase.so \
     vendor/lge/timelm/proprietary/vendor/lib/libofflinelog.so:$(TARGET_COPY_OUT_VENDOR)/lib/libofflinelog.so \
     vendor/lge/timelm/proprietary/vendor/lib/libos.so:$(TARGET_COPY_OUT_VENDOR)/lib/libos.so \
@@ -692,51 +704,12 @@ PRODUCT_COPY_FILES += \
     vendor/lge/timelm/proprietary/vendor/lib/libsns_low_lat_stream_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsns_low_lat_stream_stub.so \
     vendor/lge/timelm/proprietary/vendor/lib/libsnsapi.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsnsapi.so \
     vendor/lge/timelm/proprietary/vendor/lib/libsnsdiaglog.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsnsdiaglog.so \
+    vendor/lge/timelm/proprietary/vendor/lib/libspectre.so:$(TARGET_COPY_OUT_VENDOR)/lib/libspectre.so \
     vendor/lge/timelm/proprietary/vendor/lib/libswregistrationalgo.so:$(TARGET_COPY_OUT_VENDOR)/lib/libswregistrationalgo.so \
     vendor/lge/timelm/proprietary/vendor/lib/libsymphony-cpu.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsymphony-cpu.so \
     vendor/lge/timelm/proprietary/vendor/lib/libsynx.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsynx.so \
+    vendor/lge/timelm/proprietary/vendor/lib/libthreadutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libthreadutils.so \
     vendor/lge/timelm/proprietary/vendor/lib/libvideoutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvideoutils.so \
-    vendor/lge/timelm/proprietary/vendor/lib/modules/audio_adsp_loader.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/audio_adsp_loader.ko \
-    vendor/lge/timelm/proprietary/vendor/lib/modules/audio_apr.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/audio_apr.ko \
-    vendor/lge/timelm/proprietary/vendor/lib/modules/audio_bolero_cdc.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/audio_bolero_cdc.ko \
-    vendor/lge/timelm/proprietary/vendor/lib/modules/audio_es9218.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/audio_es9218.ko \
-    vendor/lge/timelm/proprietary/vendor/lib/modules/audio_hdmi.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/audio_hdmi.ko \
-    vendor/lge/timelm/proprietary/vendor/lib/modules/audio_machine_kona.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/audio_machine_kona.ko \
-    vendor/lge/timelm/proprietary/vendor/lib/modules/audio_mbhc.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/audio_mbhc.ko \
-    vendor/lge/timelm/proprietary/vendor/lib/modules/audio_native.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/audio_native.ko \
-    vendor/lge/timelm/proprietary/vendor/lib/modules/audio_pinctrl_lpi.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/audio_pinctrl_lpi.ko \
-    vendor/lge/timelm/proprietary/vendor/lib/modules/audio_pinctrl_wcd.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/audio_pinctrl_wcd.ko \
-    vendor/lge/timelm/proprietary/vendor/lib/modules/audio_platform.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/audio_platform.ko \
-    vendor/lge/timelm/proprietary/vendor/lib/modules/audio_q6.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/audio_q6.ko \
-    vendor/lge/timelm/proprietary/vendor/lib/modules/audio_q6_notifier.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/audio_q6_notifier.ko \
-    vendor/lge/timelm/proprietary/vendor/lib/modules/audio_q6_pdr.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/audio_q6_pdr.ko \
-    vendor/lge/timelm/proprietary/vendor/lib/modules/audio_rx_macro.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/audio_rx_macro.ko \
-    vendor/lge/timelm/proprietary/vendor/lib/modules/audio_snd_event.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/audio_snd_event.ko \
-    vendor/lge/timelm/proprietary/vendor/lib/modules/audio_stub.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/audio_stub.ko \
-    vendor/lge/timelm/proprietary/vendor/lib/modules/audio_swr.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/audio_swr.ko \
-    vendor/lge/timelm/proprietary/vendor/lib/modules/audio_swr_ctrl.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/audio_swr_ctrl.ko \
-    vendor/lge/timelm/proprietary/vendor/lib/modules/audio_tfa9878.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/audio_tfa9878.ko \
-    vendor/lge/timelm/proprietary/vendor/lib/modules/audio_tx_macro.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/audio_tx_macro.ko \
-    vendor/lge/timelm/proprietary/vendor/lib/modules/audio_usf.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/audio_usf.ko \
-    vendor/lge/timelm/proprietary/vendor/lib/modules/audio_va_macro.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/audio_va_macro.ko \
-    vendor/lge/timelm/proprietary/vendor/lib/modules/audio_wcd938x.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/audio_wcd938x.ko \
-    vendor/lge/timelm/proprietary/vendor/lib/modules/audio_wcd938x_slave.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/audio_wcd938x_slave.ko \
-    vendor/lge/timelm/proprietary/vendor/lib/modules/audio_wcd9xxx.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/audio_wcd9xxx.ko \
-    vendor/lge/timelm/proprietary/vendor/lib/modules/audio_wcd_core.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/audio_wcd_core.ko \
-    vendor/lge/timelm/proprietary/vendor/lib/modules/audio_wsa881x.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/audio_wsa881x.ko \
-    vendor/lge/timelm/proprietary/vendor/lib/modules/audio_wsa_macro.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/audio_wsa_macro.ko \
-    vendor/lge/timelm/proprietary/vendor/lib/modules/llcc_perfmon.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/llcc_perfmon.ko \
-    vendor/lge/timelm/proprietary/vendor/lib/modules/modules.alias:$(TARGET_COPY_OUT_VENDOR)/lib/modules/modules.alias \
-    vendor/lge/timelm/proprietary/vendor/lib/modules/modules.dep:$(TARGET_COPY_OUT_VENDOR)/lib/modules/modules.dep \
-    vendor/lge/timelm/proprietary/vendor/lib/modules/modules.load:$(TARGET_COPY_OUT_VENDOR)/lib/modules/modules.load \
-    vendor/lge/timelm/proprietary/vendor/lib/modules/modules.softdep:$(TARGET_COPY_OUT_VENDOR)/lib/modules/modules.softdep \
-    vendor/lge/timelm/proprietary/vendor/lib/modules/qca_cld3_wlan.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/qca_cld3_wlan.ko \
-    vendor/lge/timelm/proprietary/vendor/lib/modules/rdbg.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/rdbg.ko \
-    vendor/lge/timelm/proprietary/vendor/lib/modules/rmnet_perf.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/rmnet_perf.ko \
-    vendor/lge/timelm/proprietary/vendor/lib/modules/rmnet_shs.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/rmnet_shs.ko \
-    vendor/lge/timelm/proprietary/vendor/lib/modules/texfat.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/texfat.ko \
-    vendor/lge/timelm/proprietary/vendor/lib/modules/vpnclient.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/vpnclient.ko \
-    vendor/lge/timelm/proprietary/vendor/lib/modules/wmc_drv.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/wmc_drv.ko \
     vendor/lge/timelm/proprietary/vendor/lib/sensors.ssc.so:$(TARGET_COPY_OUT_VENDOR)/lib/sensors.ssc.so \
     vendor/lge/timelm/proprietary/vendor/lib/vendor.lge.hardware.cameraex@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.lge.hardware.cameraex@1.0.so \
     vendor/lge/timelm/proprietary/vendor/lib/vendor.qti.hardware.camera.device@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.camera.device@1.0.so \
@@ -918,6 +891,7 @@ PRODUCT_COPY_FILES += \
     vendor/lge/timelm/proprietary/vendor/lib64/libDxHdcp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libDxHdcp.so \
     vendor/lge/timelm/proprietary/vendor/lib64/libSJVideoNR.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libSJVideoNR.so \
     vendor/lge/timelm/proprietary/vendor/lib64/libSNPE.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libSNPE.so \
+    vendor/lge/timelm/proprietary/vendor/lib64/libSRIyuv.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libSRIyuv.so \
     vendor/lge/timelm/proprietary/vendor/lib64/libarcsoft_beauty_picselfie.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_beauty_picselfie.so \
     vendor/lge/timelm/proprietary/vendor/lib64/libarcsoft_dualcam_portraitlighting.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_dualcam_portraitlighting.so \
     vendor/lge/timelm/proprietary/vendor/lib64/libarcsoft_dualcam_refocus.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_dualcam_refocus.so \
@@ -927,6 +901,8 @@ PRODUCT_COPY_FILES += \
     vendor/lge/timelm/proprietary/vendor/lib64/libarcsoft_object_tracking.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_object_tracking.so \
     vendor/lge/timelm/proprietary/vendor/lib64/libarcsoft_picselfie_algorithm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_picselfie_algorithm.so \
     vendor/lge/timelm/proprietary/vendor/lib64/libarcsoft_singlecam_portrait_lighting.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_singlecam_portrait_lighting.so \
+    vendor/lge/timelm/proprietary/vendor/lib64/libbwfocuspeaking.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbwfocuspeaking.so \
+    vendor/lge/timelm/proprietary/vendor/lib64/libc++_shared_snpe.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libc++_shared_snpe.so \
     vendor/lge/timelm/proprietary/vendor/lib64/libcamera2ndk_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamera2ndk_vendor.so \
     vendor/lge/timelm/proprietary/vendor/lib64/libcamera_nn_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamera_nn_stub.so \
     vendor/lge/timelm/proprietary/vendor/lib64/libcamerapostproc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamerapostproc.so \
@@ -946,11 +922,15 @@ PRODUCT_COPY_FILES += \
     vendor/lge/timelm/proprietary/vendor/lib64/libchilog.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libchilog.so \
     vendor/lge/timelm/proprietary/vendor/lib64/libcom.qti.chinodeutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcom.qti.chinodeutils.so \
     vendor/lge/timelm/proprietary/vendor/lib64/libdepthmapdecoder.arcsoft.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdepthmapdecoder.arcsoft.so \
+    vendor/lge/timelm/proprietary/vendor/lib64/libeepromcutter.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libeepromcutter.so \
+    vendor/lge/timelm/proprietary/vendor/lib64/libfilm_emulation_hal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libfilm_emulation_hal.so \
     vendor/lge/timelm/proprietary/vendor/lib64/libhdrdynamic.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhdrdynamic.so \
     vendor/lge/timelm/proprietary/vendor/lib64/libhdrdynamicootf.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhdrdynamicootf.so \
     vendor/lge/timelm/proprietary/vendor/lib64/libimagerwrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libimagerwrapper.so \
+    vendor/lge/timelm/proprietary/vendor/lib64/libipebpsstriping.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libipebpsstriping.so \
     vendor/lge/timelm/proprietary/vendor/lib64/liblgae_main.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblgae_main.so \
     vendor/lge/timelm/proprietary/vendor/lib64/liblgawb_main.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblgawb_main.so \
+    vendor/lge/timelm/proprietary/vendor/lib64/liblgdnnsnpe.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblgdnnsnpe.so \
     vendor/lge/timelm/proprietary/vendor/lib64/liblghdri.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblghdri.so \
     vendor/lge/timelm/proprietary/vendor/lib64/libmmcamera_faceproc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmcamera_faceproc.so \
     vendor/lge/timelm/proprietary/vendor/lib64/libmmcamera_faceproc2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmcamera_faceproc2.so \
@@ -963,9 +943,11 @@ PRODUCT_COPY_FILES += \
     vendor/lge/timelm/proprietary/vendor/lib64/libsns_low_lat_stream_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsns_low_lat_stream_stub.so \
     vendor/lge/timelm/proprietary/vendor/lib64/libsnsapi.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsnsapi.so \
     vendor/lge/timelm/proprietary/vendor/lib64/libsnsdiaglog.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsnsdiaglog.so \
+    vendor/lge/timelm/proprietary/vendor/lib64/libspectre.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libspectre.so \
     vendor/lge/timelm/proprietary/vendor/lib64/libswregistrationalgo.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libswregistrationalgo.so \
     vendor/lge/timelm/proprietary/vendor/lib64/libsymphony-cpu.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsymphony-cpu.so \
     vendor/lge/timelm/proprietary/vendor/lib64/libsynx.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsynx.so \
+    vendor/lge/timelm/proprietary/vendor/lib64/libthreadutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libthreadutils.so \
     vendor/lge/timelm/proprietary/vendor/lib64/sensors.sar.so:$(TARGET_COPY_OUT_VENDOR)/lib64/sensors.sar.so \
     vendor/lge/timelm/proprietary/vendor/lib64/sensors.ssc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/sensors.ssc.so \
     vendor/lge/timelm/proprietary/vendor/lib64/vendor.lge.hardware.cameraex@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.lge.hardware.cameraex@1.0.so \
