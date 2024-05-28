@@ -1,0 +1,100 @@
+// @file sns_device_context.proto
+//
+// Defines message types for the Device Context Sensor.
+//
+// Copyright (c) 2017-2020 LGE
+// All Rights Reserved.
+// Confidential and Proprietary - LGE
+
+syntax = "proto2";
+import "nanopb.proto";
+
+// DEVICE_CONTEXT determine the current context of the device
+
+// DEVICE_CONTEXT Sensor Attribute Requirements:
+// SNS_STD_SENSOR_ATTRID_TYPE: "device_context"
+// SNS_STD_SENSOR_ATTRID_STREAM_TYPE: SNS_STD_SENSOR_STREAM_TYPE_ON_CHANGE
+
+// Stream Requests:
+// - SNS_STD_SENSOR_MSGID_SNS_STD_ON_CHANGE_CONFIG is used to enable the sensor
+// - Client must remove stream to disable the sensor
+
+// Message IDs for DEVICE_CONTEXT Sensor
+enum sns_device_context_msgid
+{
+  option (nanopb_enumopt).long_names = false;
+
+  SNS_DEVICE_CONTEXT_MSGID_SNS_DEVICE_CONTEXT_EVENT = 772;
+}
+// The types indicating the device context change
+enum sns_device_context_type
+{
+  option (nanopb_enumopt).long_names = false;
+  SNS_DEVICE_CONTEXT_UNKNOWN = 0;
+
+  // PHYSICAL CONTEXT CHANGE
+  SNS_DEVICE_CONTEXT_HALLIC  = 1;        // bitwise open/close
+  SNS_DEVICE_CONTEXT_DUAL_DISPLAY  = 2;  // UNMOUNTED MOUNTED
+  SNS_DEVICE_CONTEXT_TRANSFORM = 3;  // AT_DEPARTURE / AT_UNKNOWN / AT_TERMINAL (e.g SWIVEL, EXPAND, FOLD)
+  SNS_DEVICE_CONTEXT_CRADLE = 4;
+  SNS_DEVICE_CONTEXT_USB = 5;
+  SNS_DEVICE_CONTEXT_MOTOR = 6;
+  SNS_DEVICE_CONTEXT_ROLLABLE = 7;
+
+  // DISPLAY INFO CONTEXT CHANGE
+  SNS_DEVICE_CONTEXT_DISPLAY_BACKLIGHT = 10; // 32bit
+  SNS_DEVICE_CONTEXT_DISPLAY_MODE = 11;   // u0 u2
+  SNS_DEVICE_CONTEXT_DISPLAY_FREQ = 12;   // frequency 90hz 120hz
+  SNS_DEVICE_CONTEXT_DISPLAY_SRE_MODE = 13; // 
+
+  SNS_DEVICE_CONTEXT_MAX = 99;
+  /// TODO ...
+  /// ADD MORE DEVICE CONTEXT TYPE.
+  //SNS_DEVICE_CONTEXT_CAMERA_STATUS  = 7;    // reserved active / inactive ?
+  //SNS_DEVICE_CONTEXT_WIFI_STATUS  = 5;     // wifi on/off/scanning
+  //SNS_DEVICE_CONTEXT_USB_STATUS  = 5;      // connected /charging and such?
+  //SNS_DEVICE_CONTEXT_CRADLE_STATUS  = 6;   // wireless charging?
+  // SNS_DEVICE_CONTEXT_HALLIC_STATUS  = 8;   // [ unknown | .... | unknown | open | close | open | open ] Example hall ic status of 2bits each 0 = open , 1 close, 2 = unknown 3 = reserved
+}
+
+// The value mapping that makes sense to human.
+enum sns_device_context_value
+{
+  option (nanopb_enumopt).long_names = false;
+  option allow_alias = true;
+  SNS_DC_SWING_DEFAULT = 0; // default
+  SNS_DC_SWING_SWIVELLING = 1;    // swivelling
+  SNS_DC_SWING_SWIVELLED = 2;  // swivelling
+
+  SNS_DC_MOTOR_OFF = 0; // motor is off
+  SNS_DC_MOTOR_UP = 2;  // motor is moving up. it is TWO
+  SNS_DC_MOTOR_DOWN = 3;  // motor is moving down. it is THREE
+
+  // ADDITIONAL_DEVICE CONTEXT VALUE MAPPINGS
+  SNS_DC_DISPLAY_OFF = 0;
+  SNS_DC_DISPLAY_ON = 1; // PEND: for underdisplay mode
+
+  //SNS_DEVICE_CONTEXT_ROLLABLE
+  SNS_DC_ROLLABLE_UNKNOWN = 0;
+  SNS_DC_ROLLABLE_COLLAPSE = 1;
+  SNS_DC_ROLLABLE_EXPAND = 2;
+  SNS_DC_ROLLABLE_16_9 = 3;
+}
+
+
+message sns_device_context_event
+{
+  message context_spec {
+    required sns_device_context_type type = 1;
+    required uint32 value = 2;
+  }
+  // Device Context
+  repeated context_spec device_context = 1;
+}
+
+// Stream events:
+//
+// The sns_device_context_event message is used to publish updated context
+//
+// DEVICE_CONTEXT does not publish configuration events.
+
