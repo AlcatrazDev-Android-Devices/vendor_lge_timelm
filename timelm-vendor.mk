@@ -703,6 +703,7 @@ PRODUCT_COPY_FILES += \
     vendor/lge/timelm/proprietary/vendor/lib/libsnsapi.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsnsapi.so \
     vendor/lge/timelm/proprietary/vendor/lib/libsnsdiaglog.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsnsdiaglog.so \
     vendor/lge/timelm/proprietary/vendor/lib/libspectre.so:$(TARGET_COPY_OUT_VENDOR)/lib/libspectre.so \
+    vendor/lge/timelm/proprietary/vendor/lib/libstdc++.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstdc++.so \
     vendor/lge/timelm/proprietary/vendor/lib/libswregistrationalgo.so:$(TARGET_COPY_OUT_VENDOR)/lib/libswregistrationalgo.so \
     vendor/lge/timelm/proprietary/vendor/lib/libsymphony-cpu.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsymphony-cpu.so \
     vendor/lge/timelm/proprietary/vendor/lib/libsynx.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsynx.so \
@@ -939,6 +940,7 @@ PRODUCT_COPY_FILES += \
     vendor/lge/timelm/proprietary/vendor/lib64/libsnsapi.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsnsapi.so \
     vendor/lge/timelm/proprietary/vendor/lib64/libsnsdiaglog.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsnsdiaglog.so \
     vendor/lge/timelm/proprietary/vendor/lib64/libspectre.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libspectre.so \
+    vendor/lge/timelm/proprietary/vendor/lib64/libstdc++.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstdc++.so \
     vendor/lge/timelm/proprietary/vendor/lib64/libswregistrationalgo.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libswregistrationalgo.so \
     vendor/lge/timelm/proprietary/vendor/lib64/libsymphony-cpu.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsymphony-cpu.so \
     vendor/lge/timelm/proprietary/vendor/lib64/libsynx.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsynx.so \
