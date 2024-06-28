@@ -8,3 +8,24 @@ soong_namespace {
 	],
 }
 
+install_symlink {
+	name: "bdwlan_bdwlan_symlink",
+	soc_specific: true,
+	installed_location: "firmware/wlan/qca_cld/bdwlan.elf",
+	symlink_target: "/vendor/etc/wifi/GLOBAL/bdwlan.elf",
+}
+
+install_symlink {
+	name: "bdwlan_ch0_bdwlan_ch0_symlink",
+	soc_specific: true,
+	installed_location: "firmware/wlan/qca_cld/bdwlan_ch0.elf",
+	symlink_target: "/vendor/etc/wifi/GLOBAL/bdwlan_ch0.elf",
+}
+
+install_symlink {
+	name: "bdwlan_ch1_bdwlan_ch1_symlink",
+	soc_specific: true,
+	installed_location: "firmware/wlan/qca_cld/bdwlan_ch1.elf",
+	symlink_target: "/vendor/etc/wifi/GLOBAL/bdwlan_ch1.elf",
+}
+

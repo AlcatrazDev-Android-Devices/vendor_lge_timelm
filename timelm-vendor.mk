@@ -454,32 +454,14 @@ PRODUCT_COPY_FILES += \
     vendor/lge/timelm/proprietary/vendor/etc/sensors/registry/registry/sensors_registry:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/registry/registry/sensors_registry \
     vendor/lge/timelm/proprietary/vendor/etc/sensors/registry/registry/sensors_settings:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/registry/registry/sensors_settings \
     vendor/lge/timelm/proprietary/vendor/etc/sensors/sns_reg_config:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sns_reg_config \
-    vendor/lge/timelm/proprietary/vendor/etc/wifi/AU_TEL/bdwlan.elf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/AU_TEL/bdwlan.elf \
-    vendor/lge/timelm/proprietary/vendor/etc/wifi/AU_TEL/bdwlan_ch0.elf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/AU_TEL/bdwlan_ch0.elf \
-    vendor/lge/timelm/proprietary/vendor/etc/wifi/AU_TEL/bdwlan_ch1.elf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/AU_TEL/bdwlan_ch1.elf \
     vendor/lge/timelm/proprietary/vendor/etc/wifi/Diag.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/Diag.cfg \
     vendor/lge/timelm/proprietary/vendor/etc/wifi/GLOBAL/bdwlan.elf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/GLOBAL/bdwlan.elf \
     vendor/lge/timelm/proprietary/vendor/etc/wifi/GLOBAL/bdwlan_ch0.elf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/GLOBAL/bdwlan_ch0.elf \
     vendor/lge/timelm/proprietary/vendor/etc/wifi/GLOBAL/bdwlan_ch1.elf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/GLOBAL/bdwlan_ch1.elf \
-    vendor/lge/timelm/proprietary/vendor/etc/wifi/KR_ALL/bdwlan.elf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/KR_ALL/bdwlan.elf \
-    vendor/lge/timelm/proprietary/vendor/etc/wifi/KR_ALL/bdwlan_ch0.elf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/KR_ALL/bdwlan_ch0.elf \
-    vendor/lge/timelm/proprietary/vendor/etc/wifi/KR_ALL/bdwlan_ch1.elf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/KR_ALL/bdwlan_ch1.elf \
-    vendor/lge/timelm/proprietary/vendor/etc/wifi/NA_ATT/bdwlan.elf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/NA_ATT/bdwlan.elf \
-    vendor/lge/timelm/proprietary/vendor/etc/wifi/NA_ATT/bdwlan_ch0.elf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/NA_ATT/bdwlan_ch0.elf \
-    vendor/lge/timelm/proprietary/vendor/etc/wifi/NA_ATT/bdwlan_ch1.elf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/NA_ATT/bdwlan_ch1.elf \
-    vendor/lge/timelm/proprietary/vendor/etc/wifi/NA_SPR/bdwlan.elf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/NA_SPR/bdwlan.elf \
-    vendor/lge/timelm/proprietary/vendor/etc/wifi/NA_SPR/bdwlan_ch0.elf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/NA_SPR/bdwlan_ch0.elf \
-    vendor/lge/timelm/proprietary/vendor/etc/wifi/NA_SPR/bdwlan_ch1.elf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/NA_SPR/bdwlan_ch1.elf \
-    vendor/lge/timelm/proprietary/vendor/etc/wifi/NA_VZW/bdwlan.elf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/NA_VZW/bdwlan.elf \
-    vendor/lge/timelm/proprietary/vendor/etc/wifi/NA_VZW/bdwlan_ch0.elf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/NA_VZW/bdwlan_ch0.elf \
-    vendor/lge/timelm/proprietary/vendor/etc/wifi/NA_VZW/bdwlan_ch1.elf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/NA_VZW/bdwlan_ch1.elf \
     vendor/lge/timelm/proprietary/vendor/etc/wifi/PerProviderSubscription.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/PerProviderSubscription.conf \
     vendor/lge/timelm/proprietary/vendor/etc/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini \
     vendor/lge/timelm/proprietary/vendor/etc/wifi/aoa_cldb_falcon.bin:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/aoa_cldb_falcon.bin \
     vendor/lge/timelm/proprietary/vendor/etc/wifi/aoa_cldb_swl14.bin:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/aoa_cldb_swl14.bin \
-    vendor/lge/timelm/proprietary/vendor/etc/wifi/bdwlan.elf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/bdwlan.elf \
-    vendor/lge/timelm/proprietary/vendor/etc/wifi/bdwlan_ch0.elf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/bdwlan_ch0.elf \
-    vendor/lge/timelm/proprietary/vendor/etc/wifi/bdwlan_ch1.elf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/bdwlan_ch1.elf \
     vendor/lge/timelm/proprietary/vendor/etc/wifi/icudt53l.dat:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/icudt53l.dat \
     vendor/lge/timelm/proprietary/vendor/firmware/CAMERA_ICP.elf:$(TARGET_COPY_OUT_VENDOR)/firmware/CAMERA_ICP.elf \
     vendor/lge/timelm/proprietary/vendor/lib/HDR10plus.so:$(TARGET_COPY_OUT_VENDOR)/lib/HDR10plus.so \
@@ -950,3 +932,8 @@ PRODUCT_COPY_FILES += \
     vendor/lge/timelm/proprietary/vendor/lib64/vendor.lge.hardware.cameraex@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.lge.hardware.cameraex@1.0.so \
     vendor/lge/timelm/proprietary/vendor/lib64/vendor.lge.hardware.sensors@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.lge.hardware.sensors@1.0.so \
     vendor/lge/timelm/proprietary/vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
+
+PRODUCT_PACKAGES += \
+    bdwlan_bdwlan_symlink \
+    bdwlan_ch0_bdwlan_ch0_symlink \
+    bdwlan_ch1_bdwlan_ch1_symlink
